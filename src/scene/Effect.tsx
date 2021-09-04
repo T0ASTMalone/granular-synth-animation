@@ -44,7 +44,8 @@ export default function Effect({ children }) {
       <effectComposer ref={composer} args={[gl]}>
         <renderPass attachArray="passes" scene={scene} camera={camera} />
         {/* @ts-ignore */}
-        <unrealBloomPass attachArray="passes" args={[undefined, 1.5, -1, 0]} />
+        <unrealBloomPass attachArray="passes" args={[undefined, .9, -1, -1]}
+        />
       </effectComposer>
       <scene>{children}</scene>
     </>

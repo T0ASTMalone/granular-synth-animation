@@ -10,29 +10,30 @@ const GranualarSynth = (props: any) => {
   const { sides, balls, handleTrigger, speedOfRotation, gravity } = props;
 
   const renderBallsCallback = useCallback(() => {
+    let colors =["#a9d0cc", "#f40340", "#b3c4ff"];
     return [...new Array(balls)].map((b: number, i: number) => {
-      return <Ball key={i} />;
+      return <Ball key={i} color={colors[i]} />;
     });
   }, [balls]);
 
   return (
     <Canvas camera={{ fov: 75, position: [0, 0, 20] }} mode="concurrent">
-      {/* <Effect> */}
-      <Scene>
-        <ambientLight />
-        <spotLight args={["white", 5, 7]} position={[0, 4, 0]} angle={0.5} />
-        <Physics gravity={gravity}>
-          <Debug color="black" scale={1.1}>
+      <Effect>
+        <Scene>
+          <ambientLight />
+          <spotLight args={["white", 5, 7]} position={[0, 4, 0]} angle={0.5} />
+          <Physics gravity={gravity}>
+            {/* <Debug color="black" scale={1.1}> */}
             {renderBallsCallback()}
             <Box
               sides={sides}
               handleTrigger={handleTrigger}
               speedOfRotation={speedOfRotation}
             />
-          </Debug>
-        </Physics>
-      </Scene>
-      {/* </Effect> */}
+            {/* </Debug> */}
+          </Physics>
+        </Scene>
+      </Effect>
     </Canvas>
   );
 };

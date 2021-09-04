@@ -11,8 +11,9 @@ export interface Container {
     walls: ContainerWall[],
 }
 
-const squareSide: number[] = [8.5, 1, .5]
-const triangleSide: number[] = [10, 1, .5]
+const squareSide: number[] = [8.5, .05, .5]
+const triangleSide: number[] = [10, .05, .5]
+const pentagonSides: number[] = [6.5, .05, .5]
 
 const triangle: Container = {
     name: "triangle",
@@ -73,28 +74,28 @@ const pentagon: Container = {
         {
             rotation: [-Math.PI / 2, 0, 0],
             position: [0, -4, 0],
-            dimensions: [6.5, 1, .5]
+            dimensions: pentagonSides
         },
         {
             rotation: [-Math.PI / 2, Math.PI / 1.66, 0],
             position: [4, -1.05, 0],
-            dimensions: [6.5, 1, .5]
+            dimensions: pentagonSides
 
         },
         {
             rotation: [-Math.PI / 2, (Math.PI / 1.66) * 2, 0],
             position: [2.45, 3.75, 0],
-            dimensions: [6.5, 1, .5]
+            dimensions: pentagonSides
         },
         {
             rotation: [-Math.PI / 2, -(Math.PI / 1.66) * 2, 0],
             position: [-2.45, 3.75, 0],
-            dimensions: [6.5, 1, .5]
+            dimensions: pentagonSides
         },
         {
             rotation: [-Math.PI / 2, -Math.PI / 1.66, 0],
             position: [-4, -1.05, 0],
-            dimensions: [6.5, 1, .5]
+            dimensions: pentagonSides
         },
     ]
 }
