@@ -1,5 +1,4 @@
 import { extend, ReactThreeFiber, useThree } from "@react-three/fiber";
-import { useEffect, useState } from "react";
 // @ts-ignore
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 extend({ OrbitControls });
@@ -16,7 +15,6 @@ declare global {
 }
 
 const Scene = (props: any) => {
-
   const {
     camera,
     gl: { domElement },

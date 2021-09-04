@@ -1,5 +1,5 @@
 
-export interface ContainerWall{
+export interface ContainerWall {
     rotation: number[],
     position: number[],
     dimensions: number[]
@@ -20,18 +20,18 @@ const triangle: Container = {
     walls: [
         {
             rotation: [-Math.PI / 2, 0, 0],
-            position:[0, -2.75, 0],
+            position: [0, -2.75, 0],
             dimensions: triangleSide
         },
         {
             rotation: [-Math.PI / 2, Math.PI / 3, 0],
-            position:[2.5, 1.75, 0],
+            position: [2.5, 1.75, 0],
             dimensions: triangleSide
-            
+
         },
         {
-            rotation:[-Math.PI / 2, -Math.PI / 3, 0],
-            position:[-2.5, 1.75, 0],
+            rotation: [-Math.PI / 2, -Math.PI / 3, 0],
+            position: [-2.5, 1.75, 0],
             dimensions: triangleSide
         },
     ]
@@ -45,22 +45,22 @@ const square: Container = {
     walls: [
         {
             rotation: [-Math.PI / 2, 0, 0],
-            position:[0, 4, 0],
+            position: [0, 4, 0],
             dimensions: squareSide
         },
         {
             rotation: [-Math.PI / 2, Math.PI / 2, 0],
-            position:[-4, 0, 0],
+            position: [-4, 0, 0],
             dimensions: squareSide
         },
         {
-            rotation: [-Math.PI / 2, -Math.PI / 2, 0],
-            position:[4, 0, 0],
+            rotation: [-Math.PI / 2, (Math.PI / 2), 0],
+            position: [4, 0, 0],
             dimensions: squareSide
         },
         {
-            rotation:[-Math.PI / 2, 0, 0],
-            position:[0, -4, 0],
+            rotation: [-Math.PI / 2, 0, 0],
+            position: [0, -4, 0],
             dimensions: squareSide
         }
     ]
@@ -72,28 +72,28 @@ const pentagon: Container = {
     walls: [
         {
             rotation: [-Math.PI / 2, 0, 0],
-            position:[0, -4, 0],
+            position: [0, -4, 0],
             dimensions: [6.5, 1, .5]
         },
         {
             rotation: [-Math.PI / 2, Math.PI / 1.66, 0],
-            position:[4, -1.05, 0],
+            position: [4, -1.05, 0],
             dimensions: [6.5, 1, .5]
-            
+
         },
         {
-            rotation:[-Math.PI / 2, (Math.PI / 1.66) * 2, 0],
-            position:[2.45, 3.75, 0],
+            rotation: [-Math.PI / 2, (Math.PI / 1.66) * 2, 0],
+            position: [2.45, 3.75, 0],
             dimensions: [6.5, 1, .5]
         },
         {
-            rotation:[-Math.PI / 2, -(Math.PI / 1.66) * 2, 0],
-            position:[-2.45, 3.75, 0],
+            rotation: [-Math.PI / 2, -(Math.PI / 1.66) * 2, 0],
+            position: [-2.45, 3.75, 0],
             dimensions: [6.5, 1, .5]
         },
         {
             rotation: [-Math.PI / 2, -Math.PI / 1.66, 0],
-            position:[-4, -1.05, 0],
+            position: [-4, -1.05, 0],
             dimensions: [6.5, 1, .5]
         },
     ]

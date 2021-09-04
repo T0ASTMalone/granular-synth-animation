@@ -1,20 +1,15 @@
 import { useState } from "react";
 import "./App.css";
-import GranualarSynth from "./scene/GranualarSynth";
+import GranularSynth from "./scene/GranularSynth";
 
 function App() {
-  const [numberOfWalls, setNumberOfWalls] = useState(4);
+  const [numberOfWalls, setNumberOfWalls] = useState(3);
   const [numberOfBalls, setNumberOfBalls] = useState(1);
   const [speed, setSpeed] = useState(0.01);
-  const [update, setUpdate] = useState(false);
   const func = () => console.log("playing plonk sound!");
 
   const handleUpdateWalls = (e: React.FormEvent<HTMLInputElement>): void => {
     setNumberOfWalls(parseInt(e.currentTarget.value));
-  };
-
-  const handleUpdate = (): void => {
-    setUpdate(!update);
   };
 
   const handleUpdateBalls = (e: React.FormEvent<HTMLInputElement>): void => {
@@ -27,15 +22,14 @@ function App() {
 
   return (
     <div className="App" style={{ height: "400px", width: "400px" }}>
-      <div style={{height: "400px"}}>
-          <GranualarSynth
-            update={update}
-            sides={numberOfWalls}
-            balls={numberOfBalls}
-            handleTrigger={func}
-            speedOfRotation={speed}
-            gravity={[0, -20, 0]}
-          />
+      <div style={{ height: "400px" }}>
+        <GranularSynth
+          sides={numberOfWalls}
+          balls={numberOfBalls}
+          handleTrigger={func}
+          speedOfRotation={speed}
+          gravity={[0, -20, 0]}
+        />
       </div>
 
       <div>
@@ -75,7 +69,6 @@ function App() {
           onChange={(e) => handleUpdateSpeed(e)}
         />
       </div>
-      <button onClick={() => handleUpdate()}>Update</button>
     </div>
   );
 }
