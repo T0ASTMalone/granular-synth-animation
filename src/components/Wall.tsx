@@ -72,7 +72,7 @@ const Wall = (props: any) => {
     <mesh {...props} ref={ref} receiveShadow>
       {/* @ts-ignore */}
       <boxBufferGeometry args={[...dimensions]} />
-      <meshStandardMaterial color={"green"} />
+      <meshStandardMaterial color={"#C8C8CF"} />
     </mesh>
   );
 };
