@@ -11,9 +11,9 @@ export interface Container {
     walls: ContainerWall[],
 }
 
-const squareSide: number[] = [8.5, .05, .5]
-const triangleSide: number[] = [10, .05, .5]
-const pentagonSides: number[] = [6.5, .05, .5]
+const squareSide: number[] = [8.1, 1, .1]
+const triangleSide: number[] = [10.3, 1, .1]
+const pentagonSides: number[] = [6.2, 1, .1]
 
 const triangle: Container = {
     name: "triangle",

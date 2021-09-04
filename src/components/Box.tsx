@@ -15,7 +15,7 @@ const Box = (props: any) => {
     if (na < -360) {
       na = 0;
     }
-    // setAngle(na);
+    setAngle(na);
   });
 
   useEffect(() => {

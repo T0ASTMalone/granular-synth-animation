@@ -28,7 +28,7 @@ function App() {
           balls={numberOfBalls}
           handleTrigger={func}
           speedOfRotation={speed}
-          gravity={[0, -20, 0]}
+          gravity={[0, -25, 0]}
         />
       </div>
 

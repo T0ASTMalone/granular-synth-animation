@@ -11,7 +11,7 @@ const Wall = (props: any) => {
     args: [dimensions[0], 3, dimensions[2]],
     linearDamping: 0,
     isKinematic: true,
-    material: { friction: 0.01, restitution: 1 },
+    material: { friction: 0.01, restitution: .95 },
     onCollide: () => onContact(),
   }));
 
