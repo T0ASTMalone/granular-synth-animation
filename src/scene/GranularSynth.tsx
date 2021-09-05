@@ -7,7 +7,7 @@ import Box from "../components/Box";
 import Effect from "./Effect";
 import Parameter from "../components/Parameter";
 
-const GranualarSynth = (props: any) => {
+const GranularSynth = (props: any) => {
   const { sides, balls, handleTrigger, speedOfRotation, gravity, ballMass } =
     props;
   let colors = useMemo(() => ["#6B8EE5", "#02E18F", "#EE3F5C"], []);
@@ -59,4 +59,4 @@ const GranualarSynth = (props: any) => {
   );
 };
 
-export default GranualarSynth;
+export default GranularSynth;
