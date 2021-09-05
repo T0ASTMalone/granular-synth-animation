@@ -1,22 +1,27 @@
-import { useSphere } from "@react-three/cannon";
-import { useMemo } from "react";
+import { Triplet, useSphere } from "@react-three/cannon";
+import { useEffect, useMemo, useRef } from "react";
 import { SphereBufferGeometry } from "three";
-import useRandomColor from "../hooks/useRandomColor";
+import * as THREE from "three";
 
 const Ball = (props: any) => {
+  const { mass, color } = props;
 
-  const [ref] = useSphere(() => ({
-    mass: 0.5,
+  const [ref, api] = useSphere(() => ({
+    mass: mass,
     args: 0.5,
     position: [0, Math.floor(Math.random() * 2) + 1, 0],
     material: { friction: 0.12, restitution: 1 },
   }));
 
+  useEffect(() => {
+    api.mass.set(mass);
+  }, [mass, api]);
+
   const geom = useMemo(() => new SphereBufferGeometry(0.25, 10, 10), []);
 
   return (
     <mesh castShadow ref={ref} geometry={geom}>
-      <meshStandardMaterial color={props.color} />
+      <meshStandardMaterial color={color} />
     </mesh>
   );
 };
