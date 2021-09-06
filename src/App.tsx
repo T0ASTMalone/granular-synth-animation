@@ -33,9 +33,9 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ height: "400px", width: "400px" }}>
+    <div className="App">
 
-      <div style={{ height: "400px" }}>
+      <div>
         <GranularSynth
           sides={numberOfWalls}
           balls={numberOfBalls}
@@ -76,8 +76,8 @@ function App() {
         <input
           type="number"
           id="gravity"
-          max="20"
-          min="-23"
+          max="24"
+          min="-24"
           value={gravity}
           onChange={(e) => handleUpdateGravity(e)}
         />
